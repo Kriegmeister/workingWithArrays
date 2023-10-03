@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
                 if (!username.isNullOrBlank() && !password.isNullOrBlank() && existingAccount >= 0){
                     val savedPassword = arrayAccount[existingAccount].password
                     if (password == savedPassword) {
-                        arrayAccount[existingAccount] = Account(username, password)
+                        arrayAccount[existingAccount] = Account(username + "_updated", password + "_updated")
                         Log.i("info_garma", "New user is updated: ${editUsername.text.toString()}")
                         toastFunc("User Account has been updated successfully!")
                     }else {
